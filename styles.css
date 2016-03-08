@@ -38,7 +38,12 @@ body, a:link, a:visited, a:active{
 }
 
 .tribal {
-  border: 10px solid green;
+  background-image: url(images/snoopdog-gif.gif);
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  border: 0px solid white;
 }
 
 .ballet {
