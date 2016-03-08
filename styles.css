@@ -25,3 +25,19 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.blinky {
+  border: 10px solid red;
+}
+
+.bollywood {
+  border: 10px solid orange;
+}
+
+.tribal {
+  border: 10px solid green;
+}
+
+.ballet {
+  border: 10px solid purple;
+}

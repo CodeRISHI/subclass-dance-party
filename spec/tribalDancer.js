@@ -1,13 +1,15 @@
-var tribalDancer = function(top, left, timeBetweenSteps) {
+var TribalDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
+
+  this.$node.addClass('tribal');
 };
 
-tribalDancer.prototype = Object.create(Dancer.prototype);
-tribalDancer.prototype.constructor = tribalDancer;
+TribalDancer.prototype = Object.create(Dancer.prototype);
+TribalDancer.prototype.constructor = TribalDancer;
 
-tribalDancer.prototype.oldStep = Dancer.prototype.step;
+TribalDancer.prototype.oldStep = Dancer.prototype.step;
 
-tribalDancer.prototype.step = function() {
+TribalDancer.prototype.step = function() {
   this.oldStep();
   this.$node.toggle();
 };
