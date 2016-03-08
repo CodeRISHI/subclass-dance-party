@@ -23,10 +23,10 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $('body').height() * 0.10,
+      $('body').height() * 0.61,
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+    $('.foreground').append(dancer.$node);
   });
 });
