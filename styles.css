@@ -2,8 +2,11 @@ body, html{
   height:100%;
 }
 body{
+  background: url(images/sky-background.svg) no-repeat 100% 100% fixed;
+  background-size: cover;
+  background-position: center center;
   margin: 0px;
-  background-color:#444;
+  /*background-color:#FFF8F4;*/
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
