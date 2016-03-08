@@ -1,5 +1,11 @@
 $(document).ready(function() {
   window.dancers = [];
+  var songLookup = {
+    'TribalDancer': 'music/example1.mp3',
+    'BollywoodDancer': 'music/example2.mp3',
+    'BalletDancer': 'music/example3.mp3',
+    'BlinkyDancer': 'music/example4.mp3'
+  };
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -20,6 +26,11 @@ $(document).ready(function() {
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
+    var song = songLookup[dancerMakerFunctionName];
+    $('audio').attr('src', song);
+    console.log('start playing ' + song); 
+
+
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
@@ -28,5 +39,11 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('.foreground').append(dancer.$node);
+  });
+
+  $('.container').on('mousemove', function(event) {
+    var perspective = (1900 / event.screenX) * 10;
+    $(this).velocity({'perspective-origin': perspective + "%"}, 500);
+    console.log("MOUSE MOVED!" + " X: " + event.screenX + " Y: " +event.screenY);
   });
 });
