@@ -34,7 +34,7 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $('body').height() * 0.61,
+      $('body').height() * 0.63,
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
@@ -43,13 +43,17 @@ $(document).ready(function() {
     dancers.push(dancer);
   });
 
-  var throttlePerspective = _.debounce(function(event) {
-    var perspective = (1900 / event.screenX) * 10;
-    $(this).velocity({'perspective-origin': perspective + '%'}, 50);
-  }, 500);
+  // var throttlePerspective = _.debounce(function(event) {
+  //   var perspective = (1900 / event.screenX) * 10;
+  //   // $(this).velocity({'perspective-origin': perspective + '%'}, 50);
+  //   $(this).css({'perspective-origin': perspective + '%'});
+  // }, 1, true);
 
   $('.container').on('mousemove', function(event) {
-    throttlePerspective.call(this, event);
+    var perspective = (event.screenX / 1919) * 100;
+    $(this).css({'perspective-origin': perspective + '%'});
+
+    // throttlePerspective.call(this, event);
     console.log('MOUSE MOVED!' + ' X: ' + event.screenX + ' Y: ' + event.screenY);
   });
 
