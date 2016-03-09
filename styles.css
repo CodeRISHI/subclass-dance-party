@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+
 body, html{
   height:100%;
 }
@@ -6,6 +8,7 @@ body{
   background-size: cover;
   background-position: center center;
   margin: 0px;
+  font-family: "Roboto Condensed", sans-serif;
   /*background-color:#FFF8F4;*/
   font-size: 18px;
   display: flex;
@@ -95,6 +98,10 @@ body, a:link, a:visited, a:active{
   position: absolute;
   top: 0px;
   right: 0px;
+}
+
+.topbar a {
+  font-size: 14px;
 }
 .title{
   background-color: #777;
