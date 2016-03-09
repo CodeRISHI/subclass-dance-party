@@ -28,3 +28,12 @@ Dancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+Dancer.prototype.lineUp = function(order, total) {
+  // debugger;
+  var vw = $('.container').width();
+  var spacing = vw / (total + 1);
+  var position = (spacing * order) - (this.$node.width() / 2);
+
+  this.$node.css({'left': position});
+};

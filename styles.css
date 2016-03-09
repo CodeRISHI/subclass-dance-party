@@ -105,12 +105,26 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.blinky {
+/*.blinky {
   border: 10px solid red;
+}*/
+
+.blinky {
+  background-image: url(images/donaldduck.gif);
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  border: 0px solid white;
 }
 
 .bollywood {
-  border: 10px solid orange;
+  background-image: url(images/dancing.gif);
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  border: 0px solid white;
 }
 
 .tribal {
@@ -122,6 +136,19 @@ body, a:link, a:visited, a:active{
   border: 0px solid white;
 }
 
+/*.bollywood {
+  border: 10px solid orange;
+}*/
+
 .ballet {
-  border: 10px solid purple;
+  background-image: url(images/fatterman.gif);
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  border: 0px solid white;
 }
+
+/*.ballet {
+  border: 10px solid purple;
+}*/

@@ -10,6 +10,6 @@ BalletDancer.prototype.constructor = BalletDancer;
 BalletDancer.prototype.oldStep = Dancer.prototype.step;
 
 BalletDancer.prototype.step = function() {
-  this.oldStep();
+  // this.oldStep();
   this.$node.toggle();
 };

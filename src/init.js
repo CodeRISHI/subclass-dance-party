@@ -38,12 +38,25 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+
     $('.foreground').append(dancer.$node);
+    dancers.push(dancer);
   });
 
-  $('.container').on('mousemove', function(event) {
+  var throttlePerspective = _.debounce(function(event) {
     var perspective = (1900 / event.screenX) * 10;
-    $(this).velocity({'perspective-origin': perspective + "%"}, 500);
-    console.log("MOUSE MOVED!" + " X: " + event.screenX + " Y: " +event.screenY);
+    $(this).velocity({'perspective-origin': perspective + '%'}, 50);
+  }, 500);
+
+  $('.container').on('mousemove', function(event) {
+    throttlePerspective.call(this, event);
+    console.log('MOUSE MOVED!' + ' X: ' + event.screenX + ' Y: ' + event.screenY);
+  });
+
+  $('.lineUpButton').on('click', function(event) {
+    // event.preventDefaults();
+    _(dancers).each(function(el, ind) {
+      el.lineUp(ind + 1, dancers.length);
+    });
   });
 });

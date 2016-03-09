@@ -10,6 +10,6 @@ BollywoodDancer.prototype.constructor = BollywoodDancer;
 BollywoodDancer.prototype.oldStep = Dancer.prototype.step;
 
 BollywoodDancer.prototype.step = function() {
-  this.oldStep();
+  // this.oldStep();
   this.$node.toggle();
 };
